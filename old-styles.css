@@ -1,0 +1,266 @@
+/* Modern CSS Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f8f9fa;
+}
+
+/* Header Styles */
+header {
+  background: linear-gradient(135deg, #003366 0%, #004080 100%);
+  color: white;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+header img {
+  max-width: 200px;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: white;
+}
+
+header p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  margin-bottom: 1rem;
+}
+
+/* Social Media Links */
+.social-links {
+  margin-top: 1rem;
+}
+
+.social-links a {
+  display: inline-block;
+  margin: 0 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+.social-links a:hover {
+  transform: scale(1.1);
+}
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Compliance Notice Styles */
+.compliance-notice {
+  background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%);
+  border: 2px solid #856404;
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 16px rgba(133, 100, 4, 0.2);
+}
+
+.compliance-notice h2 {
+  color: #856404;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.notice-content {
+  background: rgba(255, 255, 255, 0.8);
+  padding: 1.5rem;
+  border-radius: 8px;
+  border-left: 4px solid #856404;
+}
+
+.notice-content p {
+  margin-bottom: 1rem;
+  color: #856404;
+  font-weight: 500;
+}
+
+.notice-content ul {
+  margin: 1rem 0;
+  padding-left: 2rem;
+  color: #856404;
+}
+
+.notice-content li {
+  margin-bottom: 0.5rem;
+}
+
+.notice-content em {
+  font-style: italic;
+  color: #6c5ce7;
+  font-weight: 600;
+}
+
+/* Main Content */
+
+/* Article Styles */
+.media-appearance {
+  background: white;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+  border-left: 4px solid #003366;
+}
+
+.media-appearance h3 {
+  color: #003366;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.media-appearance p {
+  margin-bottom: 0.75rem;
+}
+
+.media-appearance a {
+  color: #0066cc;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.media-appearance a:hover {
+  text-decoration: underline;
+}
+
+/* Privacy Policy Section */
+#privacy-policy {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+#privacy-policy h2 {
+  color: #003366;
+  margin-bottom: 1rem;
+}
+
+#privacy-policy button {
+  background: #003366;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+#privacy-policy button:hover {
+  background: #004080;
+}
+
+/* Modal Styles */
+#policyModal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.5);
+  backdrop-filter: blur(4px);
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 5% auto;
+  padding: 0;
+  border: none;
+  width: 90%;
+  max-width: 600px;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+  position: relative;
+  animation: modalSlideIn 0.3s ease;
+}
+
+@keyframes modalSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 15px 20px 0 0;
+  transition: color 0.3s ease;
+}
+
+.close:hover {
+  color: #333;
+}
+
+/* Footer */
+footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 1.5rem;
+  margin-top: 2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2rem;
+  }
+  
+  main {
+    padding: 1rem;
+  }
+  
+  .media-appearance {
+    padding: 1.5rem;
+  }
+  
+  .modal-content {
+    width: 95%;
+    margin: 2% auto;
+  }
+}
+
+/* Accessibility Improvements */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Focus styles for better accessibility */
+button:focus,
+a:focus {
+  outline: 2px solid #0066cc;
+  outline-offset: 2px;
+}
